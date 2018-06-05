@@ -1,0 +1,130 @@
+// Imagen
+{
+    "recipient": {
+        "id": "usuario"
+    },
+    "message": {
+        "attachment": {
+            "type": "image",
+            "payload": {
+                "is_reusable": true,
+                "url": "urlimagen"
+            }
+        }
+    }
+}
+// card  generic con botones postback,compartir,llamar, url
+{
+    "recipient": {
+        "id": "1691387647603633"
+    },
+    "message": {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [{
+                    "title": "Primer card",
+                    "subtitle": "xddddd",
+                    "image_url": "http://expopostulante.com/img/GUIA-INSTITUTOS/CIBERTEC/logo2.jpg",
+                    "buttons": [{
+                        "type": "postback",
+                        "title": "ver mi nota",
+                        "payload": "Das"
+                    }, {
+                        "type": "phone_number",
+                        "title": "LLamar",
+                        "payload": "940834058"
+                    }]
+                }, {
+                    "title": "Segunda  card",
+                    "subtitle": "xddddd",
+                    "image_url": "http://expopostulante.com/img/GUIA-INSTITUTOS/CIBERTEC/logo2.jpg",
+                    "buttons": [{
+                        "type": "postback",
+                        "title": "ver mi nota",
+                        "payload": "Das"
+                    }]
+                }, {
+                    "title": "segunda card",
+                    "subtitle": "xddddd",
+                    "image_url": "http://expopostulante.com/img/GUIA-INSTITUTOS/CIBERTEC/logo2.jpg",
+                    "buttons": [{
+                        "type": "postback",
+                        "title": "ver mi nota",
+                        "payload": "Das"
+                    }, {
+                        "type": "web_url",
+                        "url": "https://petersfancybrownhats.com",
+                        "title": "Visitar"
+                    }, {
+                        "type": "element_share"
+                    }]
+                }]
+            }
+        }
+    }
+}
+
+
+
+
+//LIST  
+
+
+
+{
+  "recipient":{
+    "id":"1691387647603633"
+  }, 
+  "message": {
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "template_type": "list",
+        "top_element_style": "compact",
+        "elements": [
+          {
+            "title": "Classic T-Shirt Collection",
+            "subtitle": "See all our colors",
+            "image_url": "http://www.ctiglobal.com/wp-content/uploads/2016/06/ibm-watson.png",          
+            "buttons": [
+              {
+                "title": "View",
+                "type": "web_url",
+                "url": "https://peterssendreceiveapp.ngrok.io/collection"    
+              }
+              
+            ]
+          },
+          {"image_url": "http://www.ctiglobal.com/wp-content/uploads/2016/06/ibm-watson.png",
+            "title": "Classic White T-Shirt",
+            "subtitle": "See all our colors"
+            
+          },
+          {
+          	
+            "title": "Classic Blue T-Shirt",
+            "image_url": "http://www.ctiglobal.com/wp-content/uploads/2016/06/ibm-watson.png",
+            "subtitle": "100% Cotton, 200% Comfortable",
+           
+            "buttons": [
+              {
+                "title": "Shop Now",
+                "type": "web_url",
+                "url": "https://peterssendreceiveapp.ngrok.io/shop?item=101"       
+              }
+            ]        
+          }
+        ],
+         "buttons": [
+          {
+            "title": "View More",
+            "type": "postback",
+            "payload": "payload"            
+          }
+        ]  
+      }
+    }
+  }
+}

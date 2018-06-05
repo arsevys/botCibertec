@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DashBoard</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="logo">
+				<img src="https://7c1096715b08106e45d9-86066560621c8d09273ccd7d125f633d.ssl.cf5.rackcdn.com/r/xpo/ferias/logos/logo-png.png">
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#">Javier Reyes</a></li>
+					<li><a href="#">Inicio</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="body">
+			<div class="panel">
+				<ul>
+					<li onclick="addText()">Agregar texto</li>
+					<li onclick="addImgen()">Agregar imagen</li>
+					<li>Agregar botón
+						<ul>
+							<li onclick="addButtons(1)">web</li>
+							<li onclick="addButtons(2)">llamar</li>
+							<li onclick="addButtons(3)">compartir</li>
+						</ul>
+					</li>
+					<li onclick="addTitle()">Agregar titulo</li>
+					<li onclick="addSubTitle()">Agregar subtitulo</li>
+				</ul>
+			</div>
+			<div class="gui">
+				<div id="imgcontent">
+					
+				</div>
+				<div id="bodycontent">
+					
+					<div id="basetitle"></div>
+					
+					<div id="basesubtitle"></div>
+					
+					<div id="basetexto"></div>
+				</div>
+				<div id="botoncontent">
+					<div id="baseBtn"></div>
+				</div>
+				<div>
+					<input value="Enviar" type="button" onclick="send()">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

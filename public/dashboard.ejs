@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+                DashBoard
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="css/login.css" rel="stylesheet" type="text/css">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/dash.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="js/plantillas.js"></script>
+        <script type="text/javascript" src="js/DashBoard.js"></script>
+    </head>
+    <body>
+        <div id="contenido">
+            <div class="navegador">
+                <div>
+                    <h1>
+                        CibertecBot
+                    </h1>
+                </div>
+                <div>
+                    <a href="#">
+                        Crear Modelo
+                    </a>
+                    <a href="#">
+                        Configuración
+                    </a>
+                </div>
+            </div>
+            <div class="cuerpo">
+            	<div class="panel" id="panel">
+            		<h2>Modelos</h2>
+            		<div draggable="true" data-tipo="PM">
+            			<div><p>Plantilla Multimedia</p><span class="icon-info"></span><div class="info">
+            				Arrastre el Elemento
+            			</div></div>
+            			<img draggable="false" src="https://scontent.flim9-1.fna.fbcdn.net/v/t39.2365-6/23666967_188506161716866_2869776016224550912_n.png?_nc_cat=0&oh=621453ea0f342604812b7d0fd084770f&oe=5B80D0E5">
+            		</div>
+            		<div draggable="true" data-tipo="PG">
+            			<div><p>Plantilla Generica</p><span class="icon-info"></span><div class="info">
+            				Arrastre el Elemento
+            			</div></div>
+            			<img draggable="false" src="https://scontent.flim9-1.fna.fbcdn.net/v/t39.2365-6/22880422_1740199342956641_1916832982102966272_n.png?_nc_cat=0&oh=6a580f8bf3adad4460955a5353c5853e&oe=5B8E0C3C">
+            		</div>
+            		<div draggable="true" data-tipo="PB">
+            			<div><p>Plantilla Botones</p><span class="icon-info"></span><div class="info">
+            				Arrastre el Elemento
+            			</div></div>
+            			<img draggable="false" src="https://scontent.flim9-1.fna.fbcdn.net/v/t39.2365-6/23204276_131607050888932_1057585862134464512_n.png?_nc_cat=0&oh=e9b217c4310395c6b6a42ef48dda6e26&oe=5B909B0A">
+            		</div>
+            		<div draggable="true" data-tipo="M">
+            			<div><p>Mensaje</p><span class="icon-info"></span><div class="info">
+            				Arrastre el Elemento
+            			</div></div>
+            			<img draggable="false" src="https://articles-images.sftcdn.net/wp-content/uploads/sites/2/2018/04/FB-Messenger-iOS.jpg">
+            		</div>
+            	</div>
+            	<div class="maqueta" id="maqueta">
+            		<h3>Plantilla Botones</h3>
+            		<div class="generic">
+            			<div id="bodycontent">
+            				<label>
+            					Texto
+            					<input type="text" id="texto">
+            				</label>
+            			</div>
+            			<div id="botoncontent">
+            				<label>
+            					Botón Web <input type="text" class="btn_web">
+            				</label>
+							<div id="baseBtn" onclick="modalToggle()"><div>
+								<img src="https://images.emojiterra.com/mozilla/512px/2795.png"> Agregar Botones
+							</div></div>
+						</div>
+            		</div>
+            	</div>
+            	<div class="refeerencia">
+            		<div>
+            			<h3>Tips:</h3>
+            			<p>
+            				* Web : titulo;url <br>
+                            * LLamar : titulo;numero <br>
+                            * compartir : vacio
+            			</p>
+            		</div>
+
+                     <br>
+                <span style="color:black;">Fecha Inicio :</span>
+                <input style="background: white;color:black;border: 1px solid black;" type="datetime-local" id="finicio" name="">
+                <br><span style="color:black;">Fecha Fin :</span>
+                <input style="background: white;color:black;border: 1px solid black;" type="datetime-local" id="ffin" name="">
+                <br>
+                <span style="color:black;">
+                        A quien va dirigido ?
+                    </span>
+                <br>
+                <select id="dir" style="color:black;">
+                    <option style="color:black;" value="0">Todos</option>
+                    <option style="color:black;" value="1">Alumnos</option>
+                    <option style="color:black;" value="2">Docente</option>
+                </select>
+                <br>
+
+            		<input type="button" value="Enviar Plantilla" onclick="send()">
+            	</div>
+            </div>
+        </div>
+        <div class="modal" id="botonTipo" data-estado="none">
+        	<img onclick="modalToggle()" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Grey_close_x.svg/1024px-Grey_close_x.svg.png">
+        	<div class="body">
+        		<h4>Que tipo de boton Deseas :</h4>
+        		<input type="button" value="Web" onclick="addButtons(1)">
+        		<input type="button" value="LLamar" onclick="addButtons(2)">
+        		<input type="button" value="Compartir" onclick="addButtons(3)">
+        	</div>
+        </div>
+    </body>
+</html>

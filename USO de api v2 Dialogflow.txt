@@ -1,0 +1,50 @@
+https://github.com/GoogleCloudPlatform/nodejs-docs-samples/issues/117
+hay dos opciones 
+
+
+priemro hacer estos pasos
+
+https://dialogflow.com/docs/reference/v2-auth-setup
+
+al finasa descargas el json con las credenciales
+
+1error 
+(node:9624) UnhandledPromiseRejectionWarning: Error: Unexpected error while acquiring application default credentials: Could not load the default credentials. Browse to https://developers.google.com/accounts/docs/application-default-credentials for more information.
+    at GoogleAuth.<anonymous>
+
+
+solucion instalar 
+el sdk de google cloud
+despues en consola poner
+gcloud auth application-default login
+
+
+
+2do error 
+ERROR: { Error: 7 PERMISSION_DENIED: Dialogflow API has not been used in project ....                                                               764086051850 before or it is disabled. Enable it by visiting https://console.de                                                               velopers.google.com/apis/api/dialogflow.googleapis.com/overview?project=76408605                                                               1850 then retry. If you enabled this API recently, wait a few minutes for the ac                                                               tion to propagate to our systems and retry.
+
+despues te pide que necesitas una credencial
+existen dos fomar mas para resolverlos  
+
+1ero 
+https://dialogflow.com/docs/reference/v2-auth-setup
+
+
+2do
+
+
+para accesso
+en linux
+export GOOGLE_APPLICATION_CREDENTIALS=/path/to/my/service_account.json
+
+
+en window es a ir a entorno de variables y agregar uno nueevo
+
+con el nombre de GOOGLE_APPLICATION_CREDENTIALS  
+y en Valor de la  es la ruta del json que descargastes
+
+osinodale a examinar archivo y seleccionas el json
+
+
+ojo despues de todo eso abrir en otra terminal para qeu cargue todo los cambios
+y ejecute su proyecto

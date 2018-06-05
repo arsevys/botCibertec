@@ -1,0 +1,232 @@
+.panel{
+	width: 300px;
+	height: 500px;
+	overflow: auto;
+	padding: 2%;
+}
+
+.panel h2 {
+	color: var(--color-bg);
+	font-size: 1.1em;
+	margin-bottom: 20px;
+}
+
+.panel p ,.panel span{
+	color: var(--color-form);
+	font-size: 1em;
+}
+
+.cuerpo {
+	justify-content: space-around;
+}
+
+.panel > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	box-shadow: 0px 0px 2px 0px var(--color-form);
+	cursor: -webkit-grab; cursor: grab;
+	margin: 10px 0px;
+	position: relative;
+}
+
+.panel > div > div {
+	width: 100%;
+	padding: 2% 4%; 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.panel div img {
+	margin: 2% 0%;
+	width:80%;
+}
+
+.info {
+	visibility: hidden;
+	width: 80%;
+	margin: 10%;
+	padding: 2%;
+	font-size: 0.8em;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background: var(--color-form);
+	border-radius: 5px 0px 5px 5px;
+}
+
+.panel > div > div span:hover {
+	cursor: pointer;
+	z-index: 10;
+}
+
+.panel > div > div span:hover + .info{
+	visibility: visible;
+	z-index: 3;
+}
+
+.maqueta{
+	width: 300px;
+	height: 500px;
+	overflow: auto;
+	padding: 4% 0%; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+
+.maqueta h3 {
+	color: var(--color-bg);
+}
+
+.maqueta .generic {
+	width: 80%;
+}
+
+.generic div {
+	width: 100%;
+	padding: 2% ; 
+}
+
+.generic div label {
+	color: var(--color-form);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start
+}
+
+.generic div label input {
+	width: 100%;
+	height: 30px;
+	padding: 2% 2%;
+	color: var(--color-form);
+	border-radius: 5px;
+	border: solid 1px var(--color-form);
+	font-size: 1em;
+	margin: 2% 0%;
+}
+
+.generic div div {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	font-size: 1em;
+	color: var(--color-text);
+	border-radius: 15px;
+	background-color: var(--color-bg);
+}
+
+#baseBtn:hover{
+	background: rgb(2,86,182);
+}
+
+#baseBtn:hover div{
+	background: rgb(2,86,182);
+}
+
+.generic div div img {
+	width: 20px;
+	height: 20px;
+}
+
+
+
+
+.refeerencia{
+	width: 300px;
+	height: 500px;
+	overflow: auto;
+	padding: 1%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.refeerencia > input {
+	width: 100%;
+	height: 30px;
+	border-radius: 5px;
+	border: none;
+	background-color: #5DD070;
+	cursor: pointer;
+	margin-top: 10px;
+}
+
+.refeerencia div {
+	width: 100%;
+	background-color: var(--color-form);
+	padding: 10px 20px 40px 20px;
+	color: var(--color-text);
+	border-radius: 5px;
+	
+}
+
+.refeerencia div h3 {
+	margin: 2% 0%;
+}
+
+.refeerencia div p {
+	font-size: 0.9em;
+}
+
+.modal {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(20, 20, 20, 0.7);
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal img {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.modal .body {
+	width: 320px;
+	background: white;
+	border-radius: 5px;
+	padding: 2% 3%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.modal .body h4 {
+	font-size: 1.1em;
+	color: var(--color-bg);
+	margin-bottom: 10px;
+}
+
+.modal .body input {
+	background: var(--color-bg);
+	border-radius: 5px;
+	border: none;
+	width: 90%;
+	padding: 3%;
+	margin: 2% 0%;
+	cursor: pointer;
+}
+
+.modal .body input:hover{
+	background: rgb(2,86,182);
+}
