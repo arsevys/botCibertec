@@ -48,3 +48,6 @@ osinodale a examinar archivo y seleccionas el json
 
 ojo despues de todo eso abrir en otra terminal para qeu cargue todo los cambios
 y ejecute su proyecto
+
+
+https://productforums.google.com/forum/#!msg/dialogflow/ouxlz1QBxs8/B5GyrVgMBAAJ

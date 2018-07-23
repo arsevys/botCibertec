@@ -5,6 +5,14 @@ module.exports = Object.freeze({
      "user":"root",
      "password":"mysql",
      "database":"ciberbot"
+ },
+  BD_MYSQLPublic  : {
+    "host":"sl-us-south-1-portal.29.dblayer.com",
+     "user":"admin",
+     "password":"HHDNHAVCWMOPMENV",
+     "database":"ciberbot",
+     "port":50826
  }
+ 
  
 })

@@ -1,10 +1,22 @@
 const ProyectoID = "ciberteccomunica-255fd";
 var ToolsDialogFlowV2=require("./ToolsDialogFlowV2");
+
+const serviceAccount = require("./../CibertecComunica--144731563808.json"); 
 const dialogflow = require('dialogflow');
-const sessionClient = new dialogflow.SessionsClient();
+
+let config = {
+    credentials: {
+       private_key: serviceAccount.private_key,
+        client_email: serviceAccount.client_email
+
+    }
+}
+const sessionClient = new dialogflow.SessionsClient(config);
 const languageCode = 'es-US';
 class DialogFlowV2 {
     static enviar(x, callback) {
+
+
         const sessionPath = sessionClient.sessionPath(ProyectoID, x.id);
         // The text query request.
         const request = {
@@ -16,6 +28,7 @@ class DialogFlowV2 {
                 },
             }
         };
+        console.log(request);
         sessionClient.detectIntent(request).then(responses => {
         	console.log(responses);
             console.log('Detected intent');
@@ -35,3 +48,7 @@ class DialogFlowV2 {
     }
 }
 module.exports = DialogFlowV2;
+
+// DialogFlowV2.enviar({id:'73456123564234',text:"hola"},()=>{
+
+// })
